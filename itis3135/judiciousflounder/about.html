@@ -17,10 +17,36 @@
             max-width: 800px;
             width: 90%;
         }
+
         header {
             background-color: #004966;
             padding: 1em;
             text-align: center;
+        }
+
+        .aboutus, .events {
+            color: black;
+            background-color: #DFE8D9;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 50px auto;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+        }
+
+        .aboutus {
+            display: flex;
+            gap: 20px;
+        }
+
+        img {
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .abouttext {
+            width: 55%;
         }
         
         h1, h2 {
@@ -28,18 +54,54 @@
 			text-align: center;
 		}
 
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .gallery section {
+            width: 100%;
+            max-width: 350px;
+            height: 300px;
+            border-radius: 10px;
+
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .gallery section h3 {
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
         a {
-            color: #68272A;
+            color: #ADF8FF;
         }
 
         a:hover {
-            color: #C0600C;
+            color: #00B88D;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Judicious Flounder Rent-a-Fish</h1>
+        <h1>Judicious Flounder <span style="white-space: nowrap">Rent-a-Fish</span></h1>
         <nav>
             <a href="./">Home</a> ||
             <a href="about.html">About</a>
@@ -48,12 +110,57 @@
     </header>
 
     <main>
-        <img src="../images/fish.jpg">
-        <h2>About Judicious Flounder</h2>
-        <p>Ever since they were a child, our founder and CEO, Josiah Flowers, has always dreamt of equal opportunities for all people to have access to fish, regardless of their financial situation.</p>
-        <p>At Judicious Flounder Rent-a-Fish, we believe in providing the highest quality fish entertainment for all of your fish-related needs.</p>
-        <p>No matter what event you are hosting, spice it up with the best kind of aquatic entertainment, at a low and affordable price.</p>
+        <section class="aboutus">
+            <img src="../images/fishkid.jpg">
+            <div class="abouttext">
+                <h2>About Judicious Flounder</h2>
+                <p>Ever since they were a child, our founder and CEO, Josiah Flowers, has always dreamt of equal opportunities for all people to have access to fish, regardless of their financial situation.</p>
+                <p>At Judicious Flounder <span style="white-space: nowrap">Rent-a-Fish</span>, we believe in providing the highest quality fish entertainment for all of your fish-related needs.</p>
+                <p>No matter what event you are hosting, spice it up with the best kind of aquatic entertainment, at a low and affordable price.</p>
+            </div>
+        </section>
         
+        <section class="events">
+            <h2>We do any Event!</h2>
+            <ul style="list-style-type: none; padding-left: 0">
+                <li>Birthdays</li>
+                <li>Graduations</li>
+                <li>Weddings</li>
+                <li>Funerals</li>
+                <li>Fish Birthdays</li>
+                <li>Interventions</li>
+                <li>Anniversaries</li>
+                <li>Fish Weddings</li>
+                <li>Presidential Elections</li>
+                <li>Coming Out to your Parents</li>
+                <li>Frat Parties</li>
+                <li>Fish Funerals</li>
+            </ul>
+        </section>
+        <section class="thefish">
+            <h2>Fish Selection</h2>
+            <p>Take a look at our over 5 options to choose from!</p>
+            <div class="gallery">
+                <section style="background-image: url(../images/betta.jpg)">
+                    <h3>Betta</h3>
+                </section>
+                <section style="background-image: url(../images/goldfish.jpg)">
+                    <h3>Goldfish</h3>
+                </section>
+                <section style="background-image: url(../images/clownfish.jpg)">
+                    <h3>Clownfish</h3>
+                </section>
+                <section style="background-image: url(../images/angelfish.jpg)">
+                    <h3>Angelfish</h3>
+                </section>
+                <section style="background-image: url(../images/triggerfish.jpg)">
+                    <h3>Humuhumunukunukuāpua'a</h3>
+                </section>
+                <section style="background-image: url(../images/guppy.jpg)">
+                    <h3>Guppy</h3>
+                </section>
+            </div>
+        </section>
     </main>
 
     <footer>

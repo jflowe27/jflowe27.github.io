@@ -31,10 +31,8 @@
         
         img {
             text-align: center;
-            width: 50%;
-            border: 3px #004966 solid;
+            width: 100%;
             margin-top: 10px;
-            border-radius: 20px;
         }
         
         h1, h2 {
@@ -61,7 +59,7 @@
 </head>
 <body>
     <header>
-        <h1>Judicious Flounder Rent-a-Fish</h1>
+        <h1>Judicious Flounder <span style="white-space: nowrap">Rent-a-Fish</span></h1>
         <nav>
             <a href="./">Home</a> ||
             <a href="about.html">About</a>
@@ -70,13 +68,15 @@
     </header>
 
     <main>
-        <img src="../images/fish.jpg">
-
-        <div class="about">
+        <figure>
+            <img src="../images/fish.jpg" alt="Man walking fish on a leash across a flooded street">
+            <figcaption>^ <em>This could be you!!</em></figcaption>
+        </figure>
+        <section class="about">
             <h2>About Judicious Flounder</h2>
-            <p>At Judicious Flounder Rent-a-Fish, we believe in providing the highest quality fish entertainment for all of your fish-related needs.</p>
+            <p>At Judicious Flounder <span style="white-space: nowrap">Rent-a-Fish</span>, we believe in providing the highest quality fish entertainment for all of your fish-related needs.</p>
             <p>No matter what event you are hosting, spice it up with the best kind of aquatic entertainment, at a low and affordable price.</p>
-        </div>
+        </section>
     </main>
 
     <footer>
