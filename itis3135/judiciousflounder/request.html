@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judicious Flounder Rent-a-Fish || Request A Fish</title>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: "Helvetica", sans-serif;
+            text-align: center;
+            background-color: #00668F;
+            color: #F0F0F0;
+            margin: 0;
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        header, footer {
+            background-color: #004966;
+            padding: 1em;
+            text-align: center;
+            margin: 0;
+        }
+
+        .requestform {
+            color: black;
+            background-color: #DFE8D9;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 1000px;
+        }
+
+        h1, h2 {
+			font-family: "Georgia", serif;
+			text-align: center;
+		}
+
+        a {
+            color: #ADF8FF;
+        }
+
+        a:hover {
+            color: #00B88D;
+        }
+
+        .selection {
+            color: #004966;
+        }
+
+        .waiver p {
+            margin: 5px;
+            font-size: 0.85em;
+        }
+
+        .required {
+            color: maroon;
+        }
+
+        .formrow {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .small-field {
+            flex: .5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Judicious Flounder <span style="white-space: nowrap">Rent-a-Fish</span></h1>
+        <nav>
+            <a href="./">Home</a> ||
+            <a href="about.html">About</a> ||
+            <a href="../index.html">ITIS 3135</a>
+        </nav>
+        <p class="tagline"><em>Aquatic Ambiance for Any Occasion</em></p>
+    </header>
+
+    <main>
+        <h2>Request a Fish</h2>
+        <p>Ready to add some aquatic charm to your event? Fill out the form below and one of our Fish Coordinators™ will be in touch.</p>
+
+        <section class="requestform">
+            <form action="#" method="post">
+                <p style="margin-bottom: 4px; margin-top: 0px; font-size: 0.8em;" class="required">*Required</p>
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="formrow">
+                        <div class="formgroup">
+                            <label for="firstname">First Name: <span class="required">*</span></label>
+                            <input type="text" id="firstname" name="firstname" required placeholder="John"/>
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="lastname">Last Name: <span class="required">*</span></label>
+                            <input type="text" id="lastname" name="lastname" required placeholder="Brown"/>
+                        </div>
+                    </div>
+
+                    <div class="formrow">
+                        <div class="formgroup">
+                            <label for="email">Email Address: <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="bleedingkansas@mail.com"/>
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="phone">Phone Number: <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="018-540-1861"/>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Event Information</legend>
+
+                    <div class="formrow">
+                        <div class="formgroup">
+                            <label for="date">Date: </label>
+                            <input type="date" id="date" name="date"/>
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="time">Start Time: </label>
+                            <input type="time" id="time" name="time"/>
+                        </div>
+                    </div>
+
+                    <div class="formrow">
+                        <div class="formgroup">
+                            <label for="duration">Duration (in hrs): </label>
+                            <input type="number" id="duration" name="duration" style="width: 30px;" placeholder="3" />
+                        </div>
+
+                        <div class="formgroup">
+                            <label for="eventtype">Event Type: </label>
+                            <select name="eventtype" id="eventtype">
+                                <option value="birthday">Birthday</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="funeral">Funeral</option>
+                                <option value="fishbirthday">Fish Birthday</option>
+                                <option value="intervention">Intervention</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="fishwedding">Fish Wedding</option>
+                                <option value="election">Presidential Election</option>
+                                <option value="comingout">Coming Out</option>
+                                <option value="frat">Frat Party</option>
+                                <option value="fishfuneral">Fish Funeral</option>
+                                <option selected value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 10px">
+                        <div class="formgroup formrow">
+                            <label for="street1">Street Address</label>
+                        </div>
+
+                        <div class="formgroup formrow">
+                            <input type="text" id="street1" name="street1" style="width: 80%;" placeholder="814 Shenandoah St" />
+                        </div>
+
+                        <div class="formgroup formrow">
+                            <input type="text" id="street2" name="street2" style="width: 80%;" placeholder="Apt 32-F" />
+                        </div>
+
+                        <div class="formrow">
+                            <div class="formgroup">
+                                <label for="city">City: </label>
+                                <input type="text" id="city" name="city" style="width: 100px;" placeholder="Harpers Ferry" />
+                            </div>
+
+                            <div class="formgroup">
+                                <label for="state">State: </label>
+                                <input type="text" id="state" name="state" style="width: 30px;" placeholder="WV" />
+                            </div>
+
+                            <div class="formgroup">
+                                <label for="zip">Zip Code: </label>
+                                <input type="number" id="zip" name="zip" style="width: 55px;" placeholder="25425" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Fish Preference (<a href="./about.html" class="selection">View our Selection</a>)</legend>
+
+                    <input type="checkbox" id="betta" name="betta" value="betta" />
+                    <label for="betta"><strong>Betta:</strong>  $12/hr - Classic. Reliable Slightly judgemental.</label>
+                    <br>
+
+                    <input type="checkbox" id="goldfish" name="goldfish" value="goldfish" />
+                    <label for="goldfish"><strong>Goldfish:</strong>  $8/hr - For events with emotional depth. One per tank, please.</label>
+                    <br>
+
+                    <input type="checkbox" id="clownfish" name="clownfish" value="clownfish" />
+                    <label for="clownfish"><strong>Clownfish:</strong>  $15/hr - Perfect for birthdays and existential crises.</label>
+                    <br>
+
+                    <input type="checkbox" id="angelfish" name="angelfish" value="angelfish" />
+                    <label for="angelfish"><strong>Angelfish:</strong> $20/hr - Ethereal vibes. Comes with a soft ambient glow (optional).</label>
+                    <br>
+
+                    <input type="checkbox" id="triggerfish" name="triggerfish" value="triggerfish" />
+                    <label for="triggerfish"><strong>Humuhumunukunukuāpua'a:</strong> $80/hr - Say it, spell it, rent it. A luxury fish experience.</label>
+                    <br>
+
+                    <input type="checkbox" id="guppy" name="guppy" value="guppy" />
+                    <label for="guppy"><strong>Guppy:</strong> $5/hr - Small. Shy. Probably has a secret. Ideal for intimate gatherings, quiet existential pondering, or when you just need someone to listen without judgement.</label>
+                    <br>
+
+                    <input type="checkbox" id="swarm" name="swarm" value="swarm" />
+                    <label for="swarm"><strong>Guppy Swarm (x10):</strong> $30/hr - Mass confusion. Mild chaos. Great for dance floors.</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Optional Add-Ons</legend>
+
+                    <input type="checkbox" id="tophat" name="tophat" value="tophat" />
+                    <label for="tophat"><strong>Fish-sized Top Hat:</strong>  $5 (Betta and Guppies only)</label>
+                    <br>
+
+                    <input type="checkbox" id="bubble" name="bubble" value="bubble" />
+                    <label for="bubble"><strong>Bubble Machine:</strong> $15</label>
+                    <br>
+
+                    <input type="checkbox" id="tank" name="tank" value="tank" />
+                    <label for="tank"><strong>Silk-Lined Fish Tank:</strong> $35</label>
+                    <br>
+
+                    <input type="checkbox" id="whisperer" name="whisperer" value="whisperer" />
+                    <label for="whisperer"><strong>Fish Whisperer for On-Site Guidance:</strong> $75/hr (may speak only in riddles)</label>
+                    <br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Finsurance™</legend>
+                    <p style="margin-top: 0">Worried your rented fish might get stage fright? Or swim off during your cousin's surprise intervention?</p>
+                    <p style="margin-top: 0">Finsurance™ is our premium, totally legitimate fish protection plan for events of all scales.</p>
+
+                    <input type="radio" id="basic" name="finsurance" value="basic" />
+                    <label for="basic"><strong>Basic Finsurance™:</strong> $5/fish - Covers emotional distress, accidental splahes, and minor philosophical crises.</label>
+                    <br>
+
+                    <input type="radio" id="deluxe" name="finsurance" value="deluxe" />
+                    <label for="deluxe"><strong>Deluxe Finsurance™:</strong> $15/fish - Includes emergency bubble refills, last-minute fashion fixes (tiny bowties), and up to one escape attempt.</label>
+                    <br>
+
+                    <input type="radio" id="ultimate" name="finsurance" value="ultimate" />
+                    <label for="ultimate"><strong>Ultimate Finsurance™:</strong> $50/fish - Full tank replacement, 24/7 Fish Support Hotline, and a certified Aquatic Therapist on-call (via Zoom)</label>
+                    <br>
+
+                    <input type="radio" id="uninsured" name="finsurance" value="uninsured" />
+                    <label for="uninsured"><strong>No Finsurance™</strong> - No one will come to help.</label>
+                </fieldset>
+
+                <fieldset class="waiver">
+                    <legend>Liability Waiver</legend>
+
+                    <p>I acknowledge that Judicious Flounder Rent-a-Fish™ is not responsible for any emotional, spiritual, or aquatic consequences from any fish rental.</p>
+                    <p>Fish may vanish, whisper secrets, or develop complex relationships during the event. You agree to accept this reality.</p>
+                    <p>I accept full responsibility for the fish during the rental period. If the fish is lost, stolen, or perishes under mysterious or non-mysterious circumstances, I agree to pay a flat fee of <strong>$1,299.99</strong> and at least pretend to feel bad.</p>
+                    <p>Judicious Fish Rent-a-Fish™ is not responsible for emotional distress, slippery escapes, or fish that develop unsettling psychic abilities.</p>
+                    <input type="checkbox" id="agree" name="agree" value="agree" required />
+                    <label for="agree">I accept the terms and conditions <span class="required">*</span></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Other Comments</legend>
+                    <textarea cols="20" rows="3" name="comments" id="comments"></textarea>
+                </fieldset>
+                
+                <button type="submit" style="margin-top: 10px;">Request your Fish</button>
+                
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="flowersenterprises.com/index.html" style="text-decoration: none">Flowers Enterprises</a> © 2025</p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html"><img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!"></a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css"><img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+        <script>
+                document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+                document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        </script>
+    </footer>
+</body>
+</html>
