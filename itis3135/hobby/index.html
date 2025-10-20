@@ -146,12 +146,12 @@
         const navLinks = document.querySelectorAll("nav a");
         const sections = document.querySelectorAll("main section");
 
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const target = link.getAttribute("data-section");
 
-                sections.forEach(sec => sec.classList.remove("active"));
+                sections.forEach((sec) => sec.classList.remove("active"));
 
                 document.getElementById(target).classList.add("active");
             });
