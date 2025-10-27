@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="styles/default.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="scripts/introduction.js" defer></script>
     <style>
         body {
             font-family: "Helvetica", sans-serif;
-            background-color: #dafbff;
+            background-color: #FCF5D9;
             margin: 0 auto;
             max-width: 800px;
             width: 90%;
@@ -21,7 +20,7 @@
             text-align: center;
         }
         
-        h1, h2 {
+        h1, h2, h3 {
 			font-family: "Georgia", serif;
 			text-align: center;
 		}
@@ -32,7 +31,7 @@
         }
 
         a {
-            color: maroon;
+            color: #68272A;
         }
 
         a:hover {
@@ -135,10 +134,9 @@
     </header>
 
     <main>
-        <h2>Introduction Form</h2>
-        <h3>Please submit the form below.</h3>
-
         <form>
+            <h2>Introduction Form</h2>
+            <h3>Please submit the form below.</h3>
             <fieldset>
                 <legend>BYO Introduction Form</legend>
                 <div class="form-row">
@@ -225,30 +223,6 @@
 
                 <label>Courses:</label>
                 <div id="courses-container">
-                    <div class="course-entry">
-                        <input type="text" name="course-courseNumber[]" placeholder="Course code" required="" value="ITSC-3160" style="max-width: 100px;">
-                        <input type="text" name="course-name[]" placeholder="Course name" required="" value="Database Design and Implementation">
-                        <input type="text" name="course-why[]" placeholder="Why this course?" required="" value="Concentration Elective Course">
-                        <button type="button" class="delete-course" style="background-color: red;">X</button>
-                    </div>
-                    <div class="course-entry">
-                        <input type="text" name="course-courseNumber[]" placeholder="Course code" required="" value="ITSC-2181" style="max-width: 100px;">
-                        <input type="text" name="course-name[]" placeholder="Course name" required="" value="Intro to Computer Systems">
-                        <input type="text" name="course-why[]" placeholder="Why this course?" required="" value="Major required course">
-                        <button type="button" class="delete-course" style="background-color: red;">X</button>
-                    </div>
-                    <div class="course-entry">
-                        <input type="text" name="course-courseNumber[]" placeholder="Course code" required="" value="ITIS-3135" style="max-width: 100px;">
-                        <input type="text" name="course-name[]" placeholder="Course name" required="" value="Front-End Web Application Development">
-                        <input type="text" name="course-why[]" placeholder="Why this course?" required="" value="Concentration Technical Elective">
-                        <button type="button" class="delete-course" style="background-color: red;">X</button>
-                    </div>
-                    <div class="course-entry">
-                        <input type="text" name="course-courseNumber[]" placeholder="Course code" required="" value="STAT-2122" style="max-width: 100px;">
-                        <input type="text" name="course-name[]" placeholder="Course name" required="" value="Intro to Prob & Stat">
-                        <input type="text" name="course-why[]" placeholder="Why this course?" required="" value="Major required course">
-                        <button type="button" class="delete-course" style="background-color: red;">X</button>
-                    </div>
                 </div>
                 <button type="button" id="add-course-btn">Add Course</button>
 
@@ -312,5 +286,6 @@
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/introduction.js"></script>
 </body>
 </html>
