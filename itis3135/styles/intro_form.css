@@ -116,13 +116,15 @@ fieldset {
     opacity: 0.8;
 }
 
+.hide {
+    display: none;
+}
+
 #result-container {
     font-family: "Helvetica", sans-serif;
     text-align: left;
     background-color: #FCF5D9;
     margin: 0 auto;
-    max-width: 800px;
-    width: 90%;
 }
 
 #result-container ul {
@@ -148,4 +150,8 @@ fieldset {
 
 #result-container .center {
     text-align: center;
+}
+
+#result-container h3 {
+    font-family: "Helvetica", sans-serif;
 }
