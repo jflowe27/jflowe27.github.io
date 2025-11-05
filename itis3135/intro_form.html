@@ -4,129 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josiah Flowers's Judicious Flounder || ITIS 3135 || BYO Intro</title>
-    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/intro_form.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: "Helvetica", sans-serif;
-            background-color: #FCF5D9;
-            margin: 0 auto;
-            max-width: 800px;
-            width: 90%;
-        }
-
-        header, footer {
-            text-align: center;
-        }
-        
-        h1, h2, h3 {
-			font-family: "Georgia", serif;
-			text-align: center;
-		}
-
-        ul {
-            text-align: left;
-            margin-left: 20px;
-        }
-
-        a {
-            color: #68272A;
-        }
-
-        a:hover {
-            color: #C0600C;
-        }
-
-        main {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        @media screen and (min-width: 601px) and (max-width: 980px) {
-            main {
-                width: 95%;
-                max-width: 700px;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            main {
-                width: 98%;
-                max-width: 500px;
-            }
-        }
-
-        @media screen and (min-width: 981px) and (max-width: 1400px) {
-            main {
-                max-width: 1000px;
-            }
-        }
-
-        fieldset {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            gap: 16px;
-        }
-
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .form-row label {
-            flex: 1;
-            text-align: left;
-            padding-right: 10px;
-        }
-
-        .form-row input[type="text"], .form-row input[type="file"], .form-row input[type="date"] {
-            flex: 4;
-            width: auto;
-            min-width: 200px;
-            padding: 5px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .buttons button {
-            padding: 8px 16px;
-            background-color: #004c91;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .buttons button:hover {
-            background-color: #006ac1;
-        }
-
-        #output {
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .delete-course {
-            color: white;
-            border: none;
-            padding: 4px 8px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .delete-course:hover {
-            opacity: 0.8;
-        }
-
-    </style>
+    <script defer src="introduction.js"></script>
 </head>
 <body>
     <header>
@@ -275,6 +156,7 @@
                     <button type="Submit">Submit</button>
                     <button type="reset">Reset</button>
                     <button type="button" id="clear-btn">Clear</button>
+                    <button type="button" id="generate-html">Generate HTML</button>
                 </div>
             </fieldset>
         </form>
@@ -287,5 +169,6 @@
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
     <script src="scripts/introduction.js"></script>
+    <script src="scripts/generate_html.js"></script>
 </body>
 </html>

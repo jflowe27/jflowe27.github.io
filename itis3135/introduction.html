@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: "Helvetica", sans-serif;
-            text-align: center;
+            text-align: left;
             background-color: #FCF5D9;
             margin: 0 auto;
             max-width: 800px;
@@ -42,6 +42,10 @@
             margin: 0 auto;
         }
 
+        .center {
+            text-align: center;
+        }
+
         @media screen and (min-width: 601px) and (max-width: 980px) {
             main {
                 width: 95%;
@@ -64,18 +68,20 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="center">
         <div data-include="components/header.html"></div>
     </header>
 
     <main>
         <h2>Introduction</h2>
-        <figure>
-            <figure style="text-align: center;">
-                <img src="./images/josiah-with-cat.jpeg" height="200" class="center" alt="Picture of Josiah F holding a sleeping cat">
-                <figcaption><i>(holding my cat, Mona)</i></figcaption>
-            </figure>
+        <h3 class="center">Josiah "J" C. Flowers || Judicious Flounder</h3>
+        <figure class="center">
+            <img src="./images/josiah-with-cat.jpeg" height="200" alt="Picture of Josiah F holding a sleeping cat">
+            <figcaption><i>(holding my cat, Mona)</i></figcaption>
         </figure>
+
+        <p>Hello, my name is Josiah Flowers and I am a Computer Science major. I love talking about and listening to music, especially that from the 60s and 70s. Some of my favorite hobbies include watching movies and playing video games.</p>
+
         <ul>
             <li><strong>Personal Background: </strong>I was born in Raleigh, and I lived there my entire life until I moved to Charlotte to go to school.</li>
             <li><strong>Professional Background: </strong>I do not have very much professional experience, but I worked all of last school year as a Desk Assistant for HRL and I currently work at a movie theater.</li>
@@ -93,10 +99,15 @@
             <li><strong>Funny/Interesting Item to Remember me by: </strong>I have been to Shanghai, China and walked on the Great Wall. I'd love to travel more when I have the money.</li>
             <li><strong>I'd also like to share: </strong>I love dogs and cats, but I will pick a cat over a dog 100% of the time.</li>
         </ul>
-        <div style="text-align: center;"></div>
+        
+        <blockquote class="center">
+            <q>If I am killed simply for living, let death be kinder than man.</q>
+            <br>
+            <i>- Althea Davis</i>
+        </blockquote>
     </main>
 
-    <footer>
+    <footer class="center">
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
