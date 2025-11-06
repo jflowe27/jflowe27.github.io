@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles/intro_form.css">
 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 </head>
 <body>
     <header>
@@ -154,13 +159,15 @@
 
                     <div class="form-row">
                         <label for="signature">Acknowledgement Date</label>
-                        <input id="signature" name="signature" type="date" placeholder="2000-01-01" value="2025-08-25">
+                        <input id="signature" name="signature" type="date" value="2025-08-25">
                     </div>
 
                     <div class="buttons">
                         <button type="submit" value="Submit">Submit</button>
                         <button type="reset">Reset</button>
                         <button type="button" id="resetbutton">Clear</button>
+                        <button type="button" id="generateHTML">Generate HTML</button>
+                        <button type="button" id="generateJSON">Generate JSON</button>
                     </div>
                 </fieldset>
             </form>
@@ -174,5 +181,7 @@
 
     <script src="scripts/HTMLInclude.min.js"></script>
     <script src="scripts/intro_form.js"></script>
+    <script src="scripts/generate_html.js"></script>
+    <script src="scripts/generate_json.js"></script>
 </body>
 </html>

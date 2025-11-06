@@ -10,7 +10,7 @@ header, footer {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, #introheader {
     font-family: "Georgia", serif;
     text-align: center;
 }
@@ -154,4 +154,5 @@ fieldset {
 
 #result-container h3 {
     font-family: "Helvetica", sans-serif;
+    text-align: center;
 }
