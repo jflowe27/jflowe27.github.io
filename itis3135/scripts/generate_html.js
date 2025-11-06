@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul>
 ${courseList
     .split("\n")
-    .map(line => "            " + line)
+    .map((line) => "            " + line)
     .join("\n")}
         </ul>
     </li>

@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultContainer = document.createElement("div");
         resultContainer.id = "result-container";
         resultContainer.innerHTML = `
-            <h3>${formattedName} ${formData.get("divider")} ${formData.get("adjective")} ${formData.get("animal")}</h3>
+            <h3 class="helvetica">${formattedName} ${formData.get("divider")} ${formData.get("adjective")} ${formData.get("animal")}</h3>
             <figure class="center">
                 <img src="${imageSrc}" height="200" alt="${formData.get("caption")}">
                 <figcaption><i>${formData.get("caption")}</i></figcaption>
