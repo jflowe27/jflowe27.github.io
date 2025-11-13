@@ -1,0 +1,45 @@
+body {
+    font-family: "Helvetica", sans-serif;
+    text-align: left;
+    background-color: #FCF5D9;
+    margin: 0 auto;
+    width: 90%;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: "Georgia", serif;
+    text-align: center;
+}
+
+a {
+    color: #68272A;
+}
+
+a:hover {
+    color: #C0600C;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
