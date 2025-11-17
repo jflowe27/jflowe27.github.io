@@ -3,158 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Overview -- Ronnie's Art Showcase</title>
-    <link rel="icon" href="">
-    <link rel="stylesheet" href="./project.css">
-
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-
-    <style>
-        
-    </style>
+    <title>Ronnie's Art Showcase -- Home</title>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
-    <header>
-        <h1>Ronnie's Art Showcase</h1>
-        <p>Project Overview -- Josiah Flowers</p>
-        <nav>
-            <a href="#overview">Overview</a> 🖌️
-            <a href="#client">Client Info</a> 🖌️
-            <a href="#sitemap">Site Map</a> 🖌️
-            <a href="#pagedesign">Page Design</a> 🖌️
-            <a href="#functionality">Functionality</a> 🖌️
-            <a href="#notes">Notes</a>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Ronnie's Art Showcase</h1>
+            <p class="tag">Handmade 🖌️ Colorful 🖌️ Thoughtful</p>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="project_overview.html">Overview</a>
         </nav>
     </header>
 
     <main>
-
-        <section id="overview">
-            <h2>Project Overview</h2>
-            <p>The application I plan to develop is a website to showcase artwork by Ronnie Taylor. The website will display images and videos of various projects they have worked on, including a list of future projects and a contact form.</p>
-
-            <h3>Intended Users</h3>
-            <ul>
-                <li>Art enthusiasts and anyone who appreciates art</li>
-                <li>Friends, fans, and supporters</li>
-                <li>General public and students</li>
-                <li>The artist themself, as a digital portfolio</li>
-            </ul>
-
-            <h3>Content</h3>
-            <ul>
-                <li>Home -- Overview of the website and brief explanation</li>
-                <li>Gallery -- Showcase of all of the artwork, separated into pages for different forms</li>
-                <li>About -- Biography of the artist and their inspirations</li>
-                <li>Contact -- Inquiry form</li>
-            </ul>
-        </section>
-
-        <section id="client">
-            <h2>Client Information</h2>
-            <p><strong>Client Name: </strong>Ronnie Taylor</p>
-            <p><strong>Organization: </strong>None</p>
-            <p><strong>Email: </strong><a href="mailto:vtaylo16@charlotte.edu">vtaylo16@charlotte.edu</a></p>
-            <p><strong>Phone: </strong>[private]</p>
-        </section>
-
-        <section id="sitemap">
-            <h2>Site Map</h2>
-            <figure>
-                <img src="assets/sitemap.png" alt="Site Map">
-                <figcaption class="center">Site Map for website</figcaption>
-            </figure>
-            <figure>
-                <img src="assets/wireframe.png" alt="Homepage Wireframe">
-                <figcaption class="center">Wireframe for Homepage</figcaption>
+        <section class="hero">
+            <div class="hero-inner">
+                <h2>Welcome to Ronnie's digital portfolio</h2>
+                <p>Explore paintings, crochet pieces, jewelry and more. Curated collections and comissioned work information.</p>
+                <p><a class="btn" href="gallery.html">View Gallery</a></p>
+            </div>
+            <figure class="hero-art">
+                <img src="" alt="">
+                <figcaption></figcaption>
             </figure>
         </section>
 
-        <section id="pagedesign">
-            <h2>Page Design</h2>
-            <h3>Home</h3>
-            <ul>
-                <li><strong>Purpose: </strong>To welcome visitors, introduce the artist, and present a quick overfiew of the website's purpose.</li>
-                <li><strong>Audience: </strong>General visitors, art fans, students, and potential collaborators.</li>
-                <li><strong>Content: </strong>A hero image or featured artwork, short introduction text, navigation links, and a preview of the gallery.</li>
-                <li><strong>Data Entry: </strong>No, this page does not collect user data.</li>
-                <li><strong>Buttons/Links: </strong>Navigation bar menu items / a "View Gallery" button.</li>
-                <li><strong>Actions: </strong>Buttons to navigate to other pages</li>
-                <li><strong>Future JS: </strong>Interactive featured artwork carousel using jQuery and a fade animation effect.</li>
-            </ul>
-
-            <h3>Gallery</h3>
-            <ul>
-                <li><strong>Purpose: </strong>To showcase the artist's work in an organized, visually engaging layout.</li>
-                <li><strong>Audience: </strong>Art enthusiasts, friends, general public, curators.</li>
-                <li><strong>Content: </strong>Artwork images grouped into categories such as paintings, crochet, and jewelry. Each artwork includes a title and short description.</li>
-                <li><strong>Data Entry: </strong>No, users will not enter data here.</li>
-                <li><strong>Buttons/Links: </strong>Category buttons or tabs, clickable images opening in a lightbox.</li>
-                <li><strong>Actions: </strong>Users can filter art by category, open artwork in expanded view, or scroll through collections.</li>
-                <li><strong>Future JS: </strong>jQuery-UI tabs for categories, image lightbox plugin, and AJAX loading of artwork data from a JSON file.</li>
-            </ul>
-
-            <h3>About the Artist</h3>
-            <ul>
-                <li><strong>Purpose: </strong>To share the artist's background, influences, and creative processes.</li>
-                <li><strong>Audience: </strong>Anyone who wants to learn more about the artist, potential collaborators, and art students.</li>
-                <li><strong>Content: </strong>A biography section, artist photo, list of inspirations, and possibly quotes or artist statements.</li>
-                <li><strong>Data Entry: </strong>
-                No, this page does not collect information.</li>
-                <li><strong>Buttons/Links: </strong>Links to gallery, contact page, or social media.</li>
-                <li><strong>Actions: </strong>Navigation only, no interactive content beyond reading.</li>
-                <li><strong>Future JS: </strong>Accordion UI widget for "Bio / Inspirations / Techniques" using jQuery-UI.</li>
-            </ul>
-
-            <h3>Contact</h3>
-            <ul>
-                <li><strong>Purpose: </strong>To allow users to send inquiries, feedback, or commission requests to the artist.</li>
-                <li><strong>Audience: </strong>Clients, collaborators, and interested viewers.</li>
-                <li><strong>Content: </strong>A contact form with fields such as name, email, message, and reason for inquiry.</li>
-                <li><strong>Data Entry: </strong>Yes, users enter information into a form.</li>
-                <li><strong>Buttons/Links: </strong>Submit button, optional reset button</li>
-                <li><strong>Actions: </strong>Form uses JavaScript to validate fields and then shows a confirmation message.</li>
-                <li><strong>Future JS: </strong>Form validation with jQuery, confirmation message.</li>
-            </ul>
+        <section class="preview-grid">
+            <article>
+                <h3>Paintings</h3>
+                <p>Bold color, layered textures, landscape and abstracts.</p>
+                <a href="gallery.html#paintings">See paintings →</a>
+            </article>
+            <article>
+                <h3>Crochet</h3>
+                <p>Wearable art and sculptural yarn pieces.</p>
+                <a href="gallery.html#crochet">See crochet →</a>
+            </article>
+            <article>
+                <h3>Jewelry</h3>
+                <p>Handmade necklaces and mixed-media pieces.</p>
+                <a href="gallery.html#jewelry">See jewelry →</a>
+            </article>
         </section>
 
-        <section id="functionality">
-            <h2>Dynamic Functionality</h2>
-            <p>The website will include several forms of interactivity to enhance the user experience. These features will be implemented using JavaScript, jQuery, jQuery-UI, and simple AJAX.</p>
-
-            <ul>
-                <li>Image Lightbox</li>
-                <li>Category Filters</li>
-                <li>Featured Artwork Slider</li>
-                <li>Interactive Accordion</li>
-                <li>Contact Form Validation</li>
-                <li>AJAX Artwork Loading</li>
-            </ul>
-
-            <p>Similar examples of interactivity can be seen on these websites:</p>
-            <ul>
-                <li><a href="https://lokeshdhakar.com/projects/lightbox2/">https://lokeshdhakar.com/projects/lightbox2/</a></li>
-                <li><a href="https://jqueryui.com/tabs/">https://jqueryui.com/tabs/</a></li>
-                <li><a href="https://jqueryui.com/accordion/">https://jqueryui.com/accordion/</a></li>
-            </ul>
+        <section class="callout">
+            <h3>Want to reach out to the artist?</h3>
+            <p>Use the contact page and put in your information.</p>
+            <a class="btn ghost" href="contact.html">Contact Ronnie</a>
         </section>
-
-        <section id="notes">
-            <h2>Notes</h2>
-            <ul>
-                <li>Created by Josiah Flowers</li>
-                <li>Date: 11/13/2025</li>
-                <li>References used: jQuery documentation, jQuery-UI examples, Lightbox2 documentation</li>
-                <li>All artwork and client details provided with the permission of Ronnie Taylor</li>
-            </ul>
-
-        </section>
-
     </main>
 
     <footer>
-        <div data-include="../components/footer.html"></div>
+        
     </footer>
-    <script src="scripts/HTMLInclude.min.js"></script>
+
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
