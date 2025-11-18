@@ -6,6 +6,10 @@
     <title>Gallery -- Ronnie's Art Showcase</title>
     <link rel="stylesheet" href="project.css">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,45 +30,84 @@
         <h2>Gallery</h2>
         <p class="center">Browse by category</p>
 
-        <div class="tabs">
-            <button class="tablink" data-target="#paintings">Paintings</button>
-            <button class="tablink" data-target="#crochet">Crochet</button>
-            <button class="tablink" data-target="#jewelry">Jewelry</button>
+        <div id="galleryTabs">
+            <ul>
+                <li><a href="#all">All</a></li>
+                <li><a href="#paintings">Paintings</a></li>
+                <li><a href="#crochet">Crochet</a></li>
+                <li><a href="#jewelry">Jewelry</a></li>
+            </ul>
+
+            <section id="all" class="gallery active">
+                
+            </section>
+
+            <section id="paintings" class="gallery">
+                <h3>Paintings</h3>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="assets/gallery/bubbles.jpeg" alt="bubbles on a black background">
+                        <figcaption>Bubbles</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/cherries.jpeg" alt="two cherries on a grey background">
+                        <figcaption>Cherries</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/graduation.jpeg" alt="two girls, one in a graduation cap and gown, walking towards a sunset">
+                        <figcaption>Graduation</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/scream.jpeg" alt="scream/ghostface mask on a black background with red handprints">
+                        <figcaption>Scream</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/whale-shark.jpeg" alt="whale shark surrounded by seaweed/kelp">
+                        <figcaption>Whale Shark</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/windows.jpeg" alt="sunset seen through borderless windows">
+                        <figcaption>Windows</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="crochet" class="gallery">
+                <h3>Crochet</h3>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="assets/gallery/cow.jpg" alt="stuffed animal of a cow made out of yarn">
+                        <figcaption>Cow Plush</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/duck.jpeg" alt="stuffed animal of a duck made of yarn">
+                        <figcaption>Duck Plush</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/frog.jpg" alt="stuffed animal of a frog made out of yarn">
+                        <figcaption>Frog Plush</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="jewelry" class="gallery">
+                <h3>Jewelry</h3>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="assets/gallery/moon.jpeg" alt="bead necklace with a metallic moon pendant">
+                        <figcaption>Moon Pendant</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/stars.jpeg" alt="bead necklace with white beads and gold colored stars">
+                        <figcaption>Star Necklace</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/gallery/sword.jpeg" alt="bead necklace with a metallic sword pendant">
+                        <figcaption>Sword Pendant</figcaption>
+                    </figure>
+                </div>
+            </section>
         </div>
-
-        <section id="paintings" class="gallery active">
-            <h3>Paintings</h3>
-            <div class="gallery-grid">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="crochet" class="gallery">
-            <h3>Crochet</h3>
-            <div class="gallery-grid">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="jewelry" class="gallery">
-            <h3>Jewelry</h3>
-            <div class="gallery-grid">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-        </section>
 
     </main>
 

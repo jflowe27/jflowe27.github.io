@@ -1,5 +1,6 @@
 :root {
     --accent: #68272A;
+    --accent2: #9f4e52;
     --muted: #f2efe9;
     --dark: #222;
 }
@@ -99,7 +100,10 @@ figure img {
 .btn-ghost {
     background: transparent;
     color: var(--accent);
-    border: 2px solid var(--accent);
+}
+
+.btn-ghost:hover {
+    color: var(--accent2);
 }
 
 .preview-grid {
@@ -115,6 +119,14 @@ figure img {
     border-radius: 8px;
 }
 
+article a {
+    color: var(--accent);
+}
+
+article a:hover {
+    color: var(--accent2);
+}
+
 .callout {
     background: #fff;
     padding: 1.2rem;
@@ -128,6 +140,56 @@ footer {
     color: #666;
     font-size: 0.9rem;
 }
+
+/* Completely remove jQuery UI's default background from tab <li> */
+#galleryTabs .ui-tabs-nav li {
+    background: none !important;
+    border: none !important;
+}
+
+/* Remove blue active background applied by jQuery UI */
+#galleryTabs .ui-tabs-nav li.ui-tabs-active {
+    background: none !important;
+}
+
+/* Remove blue active background from the ui-state-active class */
+#galleryTabs .ui-state-active {
+    background: none !important;
+    border: none !important;
+}
+
+/* Remove default jQuery UI look */
+#galleryTabs .ui-tabs-nav {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* All tabs (unselected) */
+#galleryTabs .ui-tabs-nav li a {
+    display: block;
+    padding: 10px 18px;
+    background-color: var(--accent2);
+    color: #ddd;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid var(--accent2);
+    border-bottom: none;
+    text-decoration: none;
+}
+
+/* Hover state */
+#galleryTabs .ui-tabs-nav li a:hover {
+    background-color: var(--accent);
+}
+
+/* Selected (active) tab */
+#galleryTabs .ui-tabs-nav li.ui-tabs-active a {
+    background-color: var(--accent); /* selected background */
+    color: white;              /* selected text */
+    border-color: var(--accent);
+    font-weight: bold;
+}
+
 
 .gallery-grid {
     display: grid;
@@ -167,9 +229,13 @@ footer {
 }
 
 .bio {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.bio-figure {
+    text-align: center;
 }
 
 .bio-figure img {
@@ -177,6 +243,7 @@ footer {
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .validator {
@@ -199,4 +266,49 @@ footer {
     clip: rect(0,0,0,0);
     white-space: nowrap;
     border: 0;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+/* About Accordion — scoped to .aboutAccordion */
+.aboutAccordion {
+    margin-top: 1.5rem;
+}
+
+/* Headers */
+.aboutAccordion .ui-accordion-header {
+    background: var(--accent2);
+    color: #ddd;
+    padding: 10px 14px;
+    border: 1px solid var(--accent2);
+    border-radius: 6px;
+    margin: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hover */
+.aboutAccordion .ui-accordion-header:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Active/open header */
+.aboutAccordion .ui-accordion-header.ui-accordion-header-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Content panel */
+.aboutAccordion .ui-accordion-content {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid var(--accent2);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    color: var(--dark);
 }

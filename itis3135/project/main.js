@@ -1,39 +1,116 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.tablink').forEach((btn) => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.gallery').forEach((s) => s.classList.remove('active'));
-            document.querySelectorAll('.tablink').forEach((b) => b.classList.remove('active'));
-            btn.classList.add('active');
-            const target = document.querySelector(btn.dataset.target);
-            if (target) target.classList.add('active');
+/* jQuery + jQuery UI interactions for all pages */
+
+$(document).ready(function () {
+    /* =====================
+       HOME PAGE: CAROUSEL
+    ======================*/
+    if ($(".hero-art img").length) {
+        let images = [
+            "assets/gallery/bubbles.jpeg",
+            "assets/gallery/cherries.jpeg",
+            "assets/gallery/graduation.jpeg",
+            "assets/gallery/scream.jpeg",
+            "assets/gallery/whale-shark.jpeg",
+            "assets/gallery/windows.jpeg"
+        ];
+
+        let index = 0;
+        setInterval(function () {
+            index = (index + 1) % images.length;
+            $(".hero-art img").fadeOut(600, function () {
+                $(this).attr("src", images[index]).fadeIn(600);
+            });
+        }, 3000);
+    }
+
+    /* =====================
+       GALLERY PAGE: TABS + LIGHTBOX + AJAX
+    ======================*/
+    if ($("#galleryTabs").length) {
+        
+        $("#galleryTabs").tabs({
+            activate: function(event, ui) {
+                const tabId = ui.newPanel.attr("id");
+                showTab(tabId);
+            }
         });
-    });
 
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function (e) {
+        let allContainer = $("#all");
+        let combinedGrid = $('<div class="gallery-grid"></div>');
+        allContainer.append(combinedGrid);
+
+        $("#galleryTabs section.gallery").not("#all").each(function () {
+            $(this).find("figure").each(function () {
+                combinedGrid.append($(this).clone());
+            });
+        });
+
+        showTab("all");
+
+        function showTab(category) {
+            if (category === "all") {
+                $(".gallery-grid").children().show();
+            } else {
+                $(".gallery-grid").children().hide();
+
+                $("#" + category + " .gallery-grid").children().show();
+            }
+        }
+
+        showTab("all");
+
+        $(".gallery-grid img").on("click", function () {
+            const src = $(this).attr("src");
+            const caption = $(this).next().text();
+            $("<div>")
+                .html(`<img src='${src}' style='width:100%'><p>${caption}</p>`)
+                .dialog({ modal: true, title: caption, width: 500 });
+        });
+
+    }
+
+    /* =====================
+       ABOUT PAGE: ACCORDION
+    ======================*/
+    if ($(".bio").length) {
+        const accordionHTML = `
+            <div class='aboutAccordion'>
+                <h3>Bio</h3>
+                <div><p></p></div>
+                <h3>Inspirations</h3>
+                <div><p></p></div>
+                <h3>Techniques</h3>
+                <div><p></p></div>
+            </div>
+        `;
+
+        $(".bio").after(accordionHTML);
+        $(".aboutAccordion").accordion();
+    }
+
+    /* =====================
+       CONTACT PAGE: FORM VALIDATION
+    ======================*/
+    if ($("#contactForm").length) {
+        $("#contactForm").on("submit", function (e) {
             e.preventDefault();
-            const name = form.querySelector('#name').value.trim();
-            const email = form.querySelector('#email').value.trim();
-            const message = form.querySelector('#message').value.trim();
-            const msgEl = document.getElementById('formMsg');
 
-            if (!name || !email || !message) {
-                msgEl.textContent = 'Please fill out all required fields.';
-                msgEl.style.color = 'crimson';
-                return;
+            let valid = true;
+            $(this).find("input, textarea").each(function () {
+                if (!$(this).val().trim()) {
+                    valid = false;
+                    $(this).css("border", "2px solid red");
+                } else {
+                    $(this).css("border", "");
+                }
+            });
+
+            if (valid) {
+                $("#formMsg").text("Message sent successfully!");
+                $(this)[0].reset();
+            } else {
+                $("#formMsg").text("Please complete all fields.");
             }
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                msgEl.textContent = 'Please enter a valid email address.';
-                msgEl.style.color = 'crimson';
-                return;
-            }
-
-            msgEl.style.color = 'green';
-            msgEl.textContent = 'Thanks -- your message has been received.';
-            form.reset();
         });
     }
 });
