@@ -76,11 +76,11 @@ $(document).ready(function () {
         const accordionHTML = `
             <div class='aboutAccordion'>
                 <h3>Bio</h3>
-                <div><p></p></div>
+                <div><p>Ronnie enjoys art as a hobby. They paint, draw, do paper mache, crochet, and nake jewelery, along with other smaller crafts, like sculpting.</p></div>
                 <h3>Inspirations</h3>
-                <div><p></p></div>
+                <div><p>Ronnie draws inspiration from nature, other creators and artists, pinterest, and their experiences and likes.</p></div>
                 <h3>Techniques</h3>
-                <div><p></p></div>
+                <div><p>Ronnie uses many techniques to create, Many of their techniques involve layering and adjusting until they are satisfied with a piece.</p></div>
             </div>
         `;
 
